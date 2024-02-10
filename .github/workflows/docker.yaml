@@ -5,6 +5,7 @@ on:
       - "main"
 jobs:
   docker:
+    environment: prod
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
