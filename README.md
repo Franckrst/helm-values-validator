@@ -2,7 +2,7 @@
 
 **Helm values format validation tool**
 
-This tool allows you to validate the format of your Helm values using a JSONSchema: https://json-schema.org/ with the Helm pre-install & pre-upgrade hooks.
+This tool allows you to validate the format of your [Helm](https://helm.sh/docs/) values using a [JSONSchema](https://json-schema.org/) with the Helm pre-install & pre-upgrade hooks.
 
 [![helm-3.14.0](https://img.shields.io/badge/helm-3.14.0-informational?style=flat-square)](https://helm.sh/docs/)
 [![jsonschema-1.4.2](https://img.shields.io/badge/jsonschema-1.4.2-informational?style=flat-square)](https://json-schema.org/)
