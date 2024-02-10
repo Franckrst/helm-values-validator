@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "lines": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "country": {
+      "type": "string",
+      "pattern" : "^[A-z]*$"
+    }
+  },
+  "required": ["lines"]
+}
