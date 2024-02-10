@@ -1,11 +1,11 @@
-<div style="text-align: center;">
+<p align="center">
 
 # ✅ Helm Values Validator
 
 *Cette outils vous permet de valider le format de vos values helm a l'aide un [JsonSchema](https://json-schema.org/) avec les hook helm `pre-install` & `pre-upgrade`*
 
 
-</div>
+</p>
 
 ![helm-3.14.0](https://img.shields.io/badge/helm-3.14.0-informational?style=flat-square)
 ![jsonschema-1.4.2](https://img.shields.io/badge/jsonschema-1.4.2-informational?style=flat-square)
