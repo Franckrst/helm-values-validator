@@ -43,6 +43,10 @@ Si vous voulez exécuter la validation sans lancer d'installation Helm, vous pou
 ```bash
 docker run -it -v $(pwd)/values.json:/values.json -v $(pwd)/schema.json:/schema.json -e SCHEMA_FILE=/schema.json -e VALUES_FILE=/values.json franckrst/helm-values-validator:0.0.0-alpha
 ```
+## 📐 Architecture
+Simple hook Helm pre-install et pre-upgrade qui déploie :
+- Une ConfigMap qui comporte le fichier schema.json et un fichier values.json qui comporte la variable .Values
+- Un Pod qui lance le conteneur de validation dans lequel est montée la ConfigMap
 
 ## Licence
 
