@@ -17,6 +17,8 @@ a [JSONSchema](https://json-schema.org/) with the Helm `pre-install` & `pre-upgr
 > * Display error messages in case of problems
 > * Manual execution possible
 
+![Terminal demo](./terminal-min.gif)
+
 ---
 
 ## 🚀 Installation
