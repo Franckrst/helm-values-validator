@@ -2,8 +2,8 @@
 
 **Outil de validation de format de valeurs Helm**
 
-Cet outil vous permet de valider le format de vos valeurs Helm à l'aide d'un [JSONSchema](https://json-schema.org/) avec les hooks Helm `pre-install` & `pre-upgrade`.
-
+Cet outil vous permet de valider le format de vos valeurs Helm à l'aide d'un [JSONSchema](https://json-schema.org/) avec
+les hooks Helm `pre-install` & `pre-upgrade`.
 
 [![helm-3.14.0](https://img.shields.io/badge/helm-3.14.0-informational?style=flat-square)](https://helm.sh/docs/)
 [![jsonschema-1.4.2](https://img.shields.io/badge/jsonschema-1.4.2-informational?style=flat-square)](https://json-schema.org/)
@@ -38,13 +38,17 @@ kubectl get pod -n demo-test test-demo-helm-values-validator -o go-template="{{r
 
 ## 🧑‍🔧 Exécution manuelle
 
-Si vous voulez exécuter la validation sans lancer d'installation Helm, vous pouvez exécuter le conteneur avec les fichiers et variables comme dans la commande suivante :
+Si vous voulez exécuter la validation sans lancer d'installation Helm, vous pouvez exécuter le conteneur avec les
+fichiers et variables comme dans la commande suivante :
 
 ```bash
 docker run -it -v $(pwd)/values.json:/values.json -v $(pwd)/schema.json:/schema.json -e SCHEMA_FILE=/schema.json -e VALUES_FILE=/values.json franckrst/helm-values-validator:0.0.0-alpha
 ```
+
 ## 📐 Architecture
+
 Simple hook Helm pre-install et pre-upgrade qui déploie :
+
 - Une ConfigMap qui comporte le fichier schema.json et un fichier values.json qui comporte la variable .Values
 - Un Pod qui lance le conteneur de validation dans lequel est montée la ConfigMap
 

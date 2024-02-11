@@ -42,16 +42,16 @@ kubectl get pod -n demo-test test-demo-helm-values-validator -o go-template="{{r
 If you want to run the validation without installing Helm, you can run the container with the files and variables as in
 the following command:
 
+```bash
+docker run -it -v $(pwd)/values.json:/values.json -v $(pwd)/schema.json:/schema.json -e SCHEMA_FILE=/schema.json -e VALUES_FILE=/values.json franckrst/helm-values-validator:0.0.0-alpha
+```
+
 ## 📐 Architecture
 
 A simple Helm pre-install and pre-upgrade hook that deploys:
 
 - A ConfigMap containing the schema.json file and a values.json file that contains the .Values variable.
 - A Pod that launches the validation container in which the ConfigMap is mounted.
-
-```bash
-docker run -it -v $(pwd)/values.json:/values.json -v $(pwd)/schema.json:/schema.json -e SCHEMA_FILE=/schema.json -e VALUES_FILE=/values.json franckrst/helm-values-validator:0.0.0-alpha
-```
 
 ## License
 
