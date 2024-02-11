@@ -57,3 +57,7 @@ A simple Helm pre-install and pre-upgrade hook that deploys:
 ## License
 
 MIT
+
+## Thx
+
+- [Github Action multiarch docker](https://dev.to/cloudx/multi-arch-docker-images-the-easy-way-with-github-actions-4k54)

@@ -57,3 +57,7 @@ Simple hook Helm pre-install et pre-upgrade qui déploie :
 
 MIT
 
+## Thx
+
+- [Github Action multiarch docker](https://dev.to/cloudx/multi-arch-docker-images-the-easy-way-with-github-actions-4k54)
+
