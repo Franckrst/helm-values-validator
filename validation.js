@@ -7,7 +7,7 @@ const _tryCatch = (fnc, message) => {
     try {
         fnc();
     } catch (e) {
-        console.error(message);
+        console.error(message.replace('%E', e.message));
         process.exit(1);
     }
 }
@@ -25,16 +25,16 @@ if (!process.env.VALUES_FILE) {
 // -- Load Files
 let valuesFile, schemaFile;
 _tryCatch(() => valuesFile = fs.readFileSync(process.env.VALUES_FILE).toString(),
-    `[ERR] Can't read values file "${process.env.VALUES_FILE}" (${e.message}).`.red);
+    `[ERR] Can't read values file "${process.env.VALUES_FILE}" (%E).`.red);
 _tryCatch(() => schemaFile = fs.readFileSync(process.env.SCHEMA_FILE).toString(),
-    `[ERR] Can't read values file "${process.env.SCHEMA_FILE}" (${e.message}).`.red);
+    `[ERR] Can't read values file "${process.env.SCHEMA_FILE}" (%E).`.red);
 
 // -- Parse Files
 let values, schema;
 _tryCatch(() => values = JSON.parse(valuesFile),
-    `[ERR] Can't parse file "${process.env.VALUES_FILE}" (${e.message}).`.red);
+    `[ERR] Can't parse file "${process.env.VALUES_FILE}" (%E).`.red);
 _tryCatch(() => schema = JSON.parse(schemaFile),
-    `[ERR] Can't parse file "${process.env.SCHEMA_FILE}" (${e.message}).`.red);
+    `[ERR] Can't parse file "${process.env.SCHEMA_FILE}" (%E).`.red);
 console.log(`Schema : \n`.blue, JSON.stringify(schema));
 console.log(`Values : \n`.blue, JSON.stringify(values));
 
