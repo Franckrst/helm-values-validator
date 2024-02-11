@@ -24,6 +24,7 @@ a [JSONSchema](https://json-schema.org/) with the Helm `pre-install` & `pre-upgr
 1. Copy the `example/templates/tests/helm-values-validator.yaml` file to your Helm stack.
 2. Add your `schema.json` to the root of your Helm chart (same level as the values.yaml).
 3. Install the Helm chart with the `helm install` command.
+4. (Optional) Convert your `values.yaml` file to `JSONSchema` on [jsonformater.org](https://jsonformatter.org/yaml-to-jsonschema)
 
 ## 📝 Logs
 

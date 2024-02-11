@@ -23,6 +23,7 @@ les hooks Helm `pre-install` & `pre-upgrade`.
 1. Copier le fichier `exemple/templates/tests/helm-values-validator.yaml` dans votre stack Helm.
 2. Ajouter votre `schema.json` à la racine de votre chart Helm (même niveau que le `values.yaml`).
 3. Installer le chart Helm avec la commande `helm install`.
+4. (Optionnel) Convertir votre fichier `values.yaml` en `JSONSchema` sur  [jsonformater.org](https://jsonformatter.org/yaml-to-jsonschema)
 
 ## 📝 Logs
 
