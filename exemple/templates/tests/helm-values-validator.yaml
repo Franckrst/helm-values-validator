@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
     - name: helm-values-validator
-      image: franckrst/helm-values-validator:0.0.1
+      image: franckrst/helm-values-validator:main
       env:
         - name: VALUES_FILE
           value: /values.json

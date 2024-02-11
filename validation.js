@@ -48,7 +48,7 @@ if (validation.errors.length === 0) {
 }
 for (const error of validation.errors) {
     fs.appendFileSync('/dev/termination-log', `ERR : ${error.stack} \n`);
-    console.error(`⚠️ ${error.stack}`.red);
+    console.error(`⚠️  ${error.stack}`.red);
 }
 
 process.exit(1);
