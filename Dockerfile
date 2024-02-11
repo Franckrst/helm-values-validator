@@ -5,7 +5,7 @@ WORKDIR /usr/app
 COPY package.json ./package.json
 COPY package-lock.json ./package-lock.json
 
-RUN npm ci
+RUN npm ci --production
 
 FROM gcr.io/distroless/nodejs20-debian12
 

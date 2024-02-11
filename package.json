@@ -11,5 +11,8 @@
   "dependencies": {
     "colors": "^1.4.0",
     "jsonschema": "^1.4.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0"
   }
 }
