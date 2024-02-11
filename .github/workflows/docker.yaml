@@ -2,7 +2,16 @@ name: ci
 on:
   push:
     branches:
-      - "main"
+      - 'main'
+      - 'dev'
+    tags:
+      - 'v*.*.*'
+  pull_request:
+    branches:
+      - 'main'
+      - 'dev'
+  workflow_dispatch:
+
 jobs:
   docker:
     environment: prod
