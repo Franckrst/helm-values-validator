@@ -1,9 +1,10 @@
-# 👌 Helm Values Validator
+# 👌 Helm Values Validator (for hook exemple)
 
 **Helm values format validation tool**
 
 This tool allows you to validate the format of your [Helm](https://helm.sh/docs/) values using
 a [JSONSchema](https://json-schema.org/) with the Helm `pre-install` & `pre-upgrade hooks.
+Like [helm Schema Files](https://helm.sh/docs/topics/charts/#schema-files)
 
 [![helm-3.14.0](https://img.shields.io/badge/helm-3.14.0-informational?style=flat-square)](https://helm.sh/docs/)
 [![jsonschema-1.4.2](https://img.shields.io/badge/jsonschema-1.4.2-informational?style=flat-square)](https://json-schema.org/)
